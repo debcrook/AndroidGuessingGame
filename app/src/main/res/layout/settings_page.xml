@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:text="Number Game Settings"
+        android:layout_width="match_parent"
+        android:id="@+id/textView3"
+        android:textSize="20sp"
+        android:textColor="@android:color/black"
+        android:background="@android:color/holo_blue_light"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp" />
+
+    <TextView
+        android:text="Current upper bound"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/currentRangeText"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:paddingLeft="10dp" />
+
+    <TextView
+        android:text="Change upper bound: (will reset current game)"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView5"
+        android:paddingLeft="10dp" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <Button
+            android:text="100"
+            android:layout_height="wrap_content"
+            android:id="@+id/button100"
+            android:layout_weight="1"
+            android:layout_width="60dp" />
+
+        <Button
+            android:text="500"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/button500"
+            android:layout_weight="1" />
+
+        <Button
+            android:text="1000"
+            android:layout_height="wrap_content"
+            android:id="@+id/button1000"
+            android:layout_weight="1"
+            android:layout_width="60dp" />
+
+        <EditText
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:ems="10"
+            android:id="@+id/rangeInput"
+            android:layout_weight="1" />
+
+        <Button
+            android:text="Go"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/custom"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="10dp" />
+
+    <TextView
+        android:text="Colour Game Settings"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView7"
+        android:textSize="20sp"
+        android:textColor="@android:color/black"
+        android:background="@android:color/holo_blue_light"
+        android:paddingLeft="10dp" />
+
+    <TextView
+        android:text="Choose difficulty: (will reset current game)"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView9"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:paddingLeft="10dp" />
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:id="@+id/difficulties">
+
+            <RadioButton
+                android:text="Easy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:id="@+id/radioEasy" />
+
+        <RadioButton
+            android:text="Medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/radioMedium"
+            android:layout_weight="1" />
+
+        <RadioButton
+            android:text="Hard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/radioHard"
+            android:layout_weight="1" />
+
+        <RadioButton
+            android:text="Hardest"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/radioHardest"
+            android:layout_weight="1" />
+
+        </RadioGroup>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:text="Return"
+            android:layout_width="match_parent"
+            android:layout_alignParentBottom = "true"
+            android:id="@+id/goBack"
+            android:layout_weight="1"
+            android:layout_height="50dp" />
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <TextView
+        android:text="You won!"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:id="@+id/youWon"
+        android:textSize="30sp"
+        android:textStyle="normal|bold"
+        android:textColor="@android:color/black"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:visibility="invisible"
+        android:layout_alignTop="@+id/youWon"
+        android:layout_marginTop = "50dp"
+        android:id="@+id/numWin" />
+
+    <View android:id="@+id/colourWinBox"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:background="#000000"
+        android:visibility="invisible"
+        android:layout_below="@+id/youWon"
+        android:layout_marginTop="60dp"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:text="The colour was"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/colourWinBox"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="35dp"
+        android:visibility="invisible"
+        android:id="@+id/colourWinText" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:id="@+id/colourWinRed"
+        android:text="red"
+        android:layout_below="@+id/colourWinText"
+        android:layout_alignStart="@+id/colourWinText"
+        android:visibility="invisible"/>
+
+    <TextView
+        android:text="green"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/colourWinRed"
+        android:layout_alignStart="@+id/colourWinRed"
+        android:layout_marginTop="15dp"
+        android:visibility="invisible"
+        android:id="@+id/colourWinGreen" />
+
+    <TextView
+        android:text="blue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/colourWinGreen"
+        android:layout_alignStart="@+id/colourWinGreen"
+        android:layout_marginTop="15dp"
+        android:visibility="invisible"
+        android:id="@+id/colourWinBlue" />
+
+    <Button
+        android:text="Play Again"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="15dp"
+        android:id="@+id/newGame" />
+
+</RelativeLayout>

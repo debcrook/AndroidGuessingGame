@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:text="Guess the RGB colour"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="46dp"
+        android:id="@+id/textView" />
+
+    <!--I adapted this code from the web: -->
+    <View android:id="@+id/colourWinBox"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="#000000"
+        android:visibility="visible"
+        android:layout_marginStart="100dp"
+        android:layout_alignTop="@+id/guessColour"
+        android:layout_alignLeft="@+id/guessColour"/>
+
+
+    <SeekBar
+        android:layout_height="wrap_content"
+        android:id="@+id/redBar"
+        android:layout_width="180dp"
+        android:layout_marginTop="24dp"
+        android:layout_below="@+id/textView"
+        android:layout_alignEnd="@+id/textView"
+        android:max="255"
+        android:progressTint="#ff0000"
+        android:foregroundTint="#ff0000"
+        android:progressBackgroundTint="#ff0000"
+        android:thumbTint="#ff0000" />
+
+    <SeekBar
+        android:layout_height="wrap_content"
+        android:id="@+id/greenBar"
+        android:layout_width="180dp"
+        android:layout_alignTop="@+id/redBar"
+        android:layout_alignStart="@+id/redBar"
+        android:layout_marginTop="50dp"
+        android:max="255"
+        android:thumbTint="#00ff00"
+        android:progressBackgroundTint="#00ff00"
+        android:progressTint="#00ff00"
+        android:foregroundTint="#00ff00" />
+
+    <SeekBar
+        android:layout_height="wrap_content"
+        android:id="@+id/blueBar"
+        android:layout_width="180dp"
+        android:layout_marginTop="50dp"
+        android:layout_alignTop="@+id/greenBar"
+        android:layout_alignStart="@+id/greenBar"
+        android:max="255"
+        android:foregroundTint="#0000ff"
+        android:progressBackgroundTint="#0000ff"
+        android:progressTint="#0000ff"
+        android:thumbTint="#0000ff" />
+
+    <Button
+        android:text="&lt;"
+        android:id="@+id/redDown"
+        android:layout_width="30dp"
+        android:layout_height="40dp"
+        android:layout_alignTop="@+id/textView"
+        android:layout_marginTop="30dp"
+        android:layout_toStartOf="@+id/redBar"
+        android:layout_marginEnd="1dp" />
+
+    <Button
+        android:text="&lt;"
+        android:id="@+id/greenDown"
+        android:layout_width="30dp"
+        android:layout_height="40dp"
+        android:layout_alignTop="@+id/redDown"
+        android:layout_marginTop="50dp"
+        android:layout_toStartOf="@+id/redBar"
+        android:layout_marginEnd="1dp" />
+
+    <Button
+        android:text="&lt;"
+        android:id="@+id/blueDown"
+        android:layout_width="30dp"
+        android:layout_height="40dp"
+        android:layout_alignTop="@+id/greenDown"
+        android:layout_marginTop="50dp"
+        android:layout_toStartOf="@+id/redBar"
+        android:layout_marginEnd="1dp" />
+
+    <Button
+        android:text=">"
+        android:id="@+id/redUp"
+        android:layout_width="30dp"
+        android:layout_height="40dp"
+        android:layout_alignTop="@+id/textView"
+        android:layout_marginTop="30dp"
+        android:layout_alignEnd="@+id/colourWinBox"/>
+
+    <Button
+        android:text=">"
+        android:id="@+id/greenUp"
+        android:layout_width="30dp"
+        android:layout_height="40dp"
+        android:layout_alignTop="@+id/redUp"
+        android:layout_marginTop="50dp"
+        android:layout_alignEnd="@+id/colourWinBox"/>
+
+    <Button
+        android:text=">"
+        android:id="@+id/blueUp"
+        android:layout_width="30dp"
+        android:layout_height="40dp"
+        android:layout_alignTop="@+id/greenUp"
+        android:layout_marginTop="50dp"
+        android:layout_alignEnd="@+id/colourWinBox"/>
+
+    <EditText
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/redNum"
+        android:layout_marginStart="14dp"
+        android:layout_alignTop="@+id/redUp"
+        android:layout_toEndOf="@+id/redUp"
+        android:imeOptions="actionDone"/>
+
+    <EditText
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/greenNum"
+        android:layout_marginStart="14dp"
+        android:layout_alignTop="@+id/greenUp"
+        android:layout_toEndOf="@+id/redUp"
+        android:imeOptions="actionDone"/>
+
+    <EditText
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/blueNum"
+        android:layout_marginStart="14dp"
+        android:layout_alignTop="@+id/blueUp"
+        android:layout_toEndOf="@+id/redUp"
+        android:imeOptions="actionDone"/>
+
+    <TextView
+        android:text="Your guess"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/guessColour"
+        android:layout_alignStart="@+id/guessColour"
+        android:layout_marginTop="11dp"
+        android:id="@+id/labelGuess" />
+
+    <TextView
+        android:text="Answer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/labelGuess"
+        android:layout_alignStart="@+id/colourWinBox"
+        android:id="@+id/labelAns" />
+
+    <Button
+        android:text="Reset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/reset2"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:text="Return"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/goBackColour" />
+
+    <View android:id="@+id/guessColour"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="#000000"
+        android:visibility="visible"
+        android:layout_marginTop="40dp"
+        android:layout_below="@+id/blueDown"
+        android:layout_toStartOf="@+id/space1" />
+
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/space1"/>
+
+</RelativeLayout>
